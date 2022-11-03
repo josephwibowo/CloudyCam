@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package StartPlayback;
+
+message StartPlayback {
+  required int32 SessionId = 1;
+  required int32 Profile = 2;
+  optional double StartTime = 3;
+  repeated bytes ExternalIp = 4;
+  optional int32 ExternalPort = 5;
+  repeated int32 OtherProfiles = 6; 
+  optional int32 ProfileNotFoundAction = 7;
+}

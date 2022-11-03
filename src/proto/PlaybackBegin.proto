@@ -1,0 +1,22 @@
+syntax = "proto2";
+
+package PlaybackBegin;
+
+message PlaybackBegin {
+    message Stream {
+        optional int32 ChannelId = 1;
+        optional int32 CodecType = 2;
+        optional int32 SampleRate = 3;
+        repeated bytes PrivateData = 4;
+        optional double StartTime = 5;
+        optional int32 UdpSsrc = 6;
+        optional int32 RtpStartTime = 7;
+        optional int32 Profile = 8;
+    }
+  required int32 SessionId = 1;
+  repeated Stream Channels = 2;
+  repeated bytes SrtpMasterKey = 3;
+  repeated bytes SrtpMasterSalt = 4;
+  optional int32 FacKVal = 5;
+  optional int32 FacNVal = 6; 
+}

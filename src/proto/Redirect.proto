@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+package Redirect;
+
+message Redirect {
+  required string NewHost = 1;
+  required bool IsTranscode = 2;
+}

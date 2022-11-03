@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package Playback;
+
+message Playback {
+  required int32 SessionId = 1;
+  required int32 ChannelId = 2;
+  optional int64 TimestampDelta = 3;
+  repeated bytes Payload = 4;
+  optional int32 LatencyRtpSequence = 5;
+  optional int32 LatencyRtpSsrc = 6; 
+  repeated int32 DirectorsCutRegions = 7;
+}

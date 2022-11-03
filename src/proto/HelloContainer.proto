@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+package HelloContainer;
+
+message HelloContainer {
+  required int32 ProtocolVersion = 1;
+  required string Uuid = 2;
+  required bool RequireConnectedCamera = 3;
+  optional string SessionToken = 4;
+  optional bool IsCamera = 5;
+  optional string DeviceId = 6; 
+  required string UserAgent = 7;
+  optional string ServiceAccessKey = 8;
+  required int32 ClientType = 9;
+  optional string WwnAccessToken = 10;
+  optional string EncryptedDeviceId = 11;
+  repeated bytes AuthorizeRequest = 12;
+  optional string ClientIpAddress = 13;
+  optional bool RequireOwnerServer = 14;
+}
