@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "foggycam"
+version = "0.1.0"
+description = ""
+authors = ["Joseph Wibowo"]
+license = "GNU"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+ffmpeg-python = "0.2.0"
+protobuf = "3.19.1"
+requests = "2.26.0"
+websockets = "10.1"
+websocket-client = "1.2.3"
+future = "0.18.2"
+idna = "3.3"
+urllib3 = "1.26.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

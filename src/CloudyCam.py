@@ -31,7 +31,7 @@ class CloudyCam:
         self.audio_channel_id = None
         self.video_stream = []
         self.audio_stream = []
-        self.stream_limit = limit
+        self.stream_limit = config.get('stream_limit', limit)
         self.stream_host = ''
 
 
@@ -52,8 +52,10 @@ class CloudyCam:
             "Referer": "https://accounts.google.com/o/oauth2/iframe",
             "cookie": self.config['cookie']
         }
-        r = get(self.config['auth_url'], headers)
-        return r.json()['access_token']
+        r = get(self.config['auth_url'], headers).json()
+        if 'access_token' not in r:
+            raise requests.RequestException(f"Google request error. Response: {r}")
+        return r['access_token']
 
 
     def _get_ss_domain(self):

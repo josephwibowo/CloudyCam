@@ -2,9 +2,11 @@
   "ffmpeg_path": "",
   "auth_url": "",
   "api_key": "",
-  "user_agent": "",
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36",
   "cookie": "",
   "nest_api_hostname": "",
   "camera_api_hostname": "",
-  "camera_auth_cookie": ""
-}
+  "camera_auth_cookie": "",
+  "stream_limit": 100
+ }
+ 

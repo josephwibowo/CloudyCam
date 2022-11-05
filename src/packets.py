@@ -216,7 +216,9 @@ async def dump_to_file(cloudycam, ws):
     ]
     p = Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, shell=False)
     video = b''.join(cloudycam.video_stream)
-    p.communicate(video)
+    out, err = p.communicate(video)
+    log.info(out)
+    log.info(err)
 
 
     args = [
